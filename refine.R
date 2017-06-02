@@ -1,4 +1,7 @@
 #1
+refine$company = tolower(refine$company)
+refine$company = stringr::str_replace_all(refine$company, "0", "o")
+refine$company = gsub(" ", "", refine$company)
 refine$company = gsub("phillips", "philips", refine$company)
 refine$company = gsub("phllips", "philips", refine$company)
 refine$company = gsub("phillps", "philips", refine$company)
